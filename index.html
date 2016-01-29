@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>test Objet JavaScript</title>
+		<script type="text/javascript" src="script/wilScript.js"></script>
+		<script type="text/javascript" src="script/outils.js"></script>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+		<script>
+
+
+			//===============ZONE DE TEST====================
+						
+			// test sur la premier facon d'initialisé un objet
+			
+
+			// alon instancier cette objet !!!
+			var voiture2 = new Voiture("blue");
+
+
+			Limousine.prototype = new Voiture();
+
+			var myLimousine = new Limousine(6,10);
+
+
+			var didierMob = new Voiture("White");
+
+
+			var wilObject = new Object();
+
+			/*
+			alert(MaVoiture.couleur);
+
+			alert(MaVoiture.vroum());
+			alert(MaVoiture.poids);
+			MaVoiture.poids = "je suis le poids de la voiture :o !!!";
+			alert(MaVoiture.poids);
+			*/
+
+			// showProp(myCar);
+
+			var monAnimal1 = Object.create(monAnimal);
+
+			monAnimal1.manger = function() {
+				return "surcharger le manger :p !!! miam miam";
+			}
+
+			monAnimal1.newProp1 = "toto";
+
+			var monAnimal2 = Object.create(monAnimal1);
+			monAnimal2.parler = function () {
+				return "je suis un Animal 2 "
+			}
+
+
+			// var monAnimalDeTest = Object.create(monAnimal1);
+
+			// showProp(monAnimalDeTest);
+			// showPropSup(Object.getPrototypeOf(monAnimalDeTest));
+
+
+			// showProp(monAnimal1,"monAnimal1");
+			
+			showAllProp(monAnimal1);
+			showAllPropSup(monAnimal1,"monAnimal1",2);
+
+			// show(Object.getPrototypeOf(monAnimal1.manger));
+			// show(Object.getPrototypeOf(monAnimal1).manger());
+
+			// showProp(monAnimal1,"monAnimal1");
+
+			// showPropSup(monAnimal1,"monAnimal1");
+
+			// showAllProp(monAnimal1);
+			// show(myLimousine.infoVitesse(74));
+			
+			// en passant par le constructeur 
+			/*
+			voiture2.roule();
+			alert(voiture2.infoVitesse(71));
+			alert(voiture2.infoVitesse("toto"));
+			*/
+
+
+		</script>
+
+	</body>
+</html>
